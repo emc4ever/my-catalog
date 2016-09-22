@@ -1,6 +1,6 @@
 .catalog:
   name: "ScaleIO"
-  version: "v1.3"
+  version: "v2.0"
   description: "ScaleIO Launcher - with 3 sds, 2 mdms in cluster mode, and 1 tb (NO SDC)"
 
 tb:

@@ -2,7 +2,7 @@ tb:
   privileged: true
   volumes:
    - /sys/fs/cgroup:/sys/fs/cgroup:ro
-  image: wlan0/tb
+  image: emc4ever/tb
   labels:
       io.rancher.container.pull_image: always
       io.rancher.container.hostname_override: container_name
@@ -11,7 +11,7 @@ sds:
   privileged: true
   volumes:
    - /sys/fs/cgroup:/sys/fs/cgroup:ro
-  image: wlan0/sds
+  image: emc4ever/sds
   labels:
       io.rancher.container.hostname_override: container_name
       io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
@@ -22,7 +22,7 @@ mdm:
   volumes:
    - /sys/fs/cgroup:/sys/fs/cgroup:ro
    - /dev/shm:/dev/shm
-  image: wlan0/mdm
+  image: emc4ever/mdm
   labels:
       io.rancher.container.hostname_override: container_name
       io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/primary_mdm
@@ -33,7 +33,7 @@ primary-mdm:
   volumes:
    - /sys/fs/cgroup:/sys/fs/cgroup:ro
    - /dev/shm:/dev/shm
-  image: wlan0/mdm
+  image: emc4ever/mdm
   command: /usr/sbin/init
   entrypoint: /run_mdm_and_configure.sh
   labels:
