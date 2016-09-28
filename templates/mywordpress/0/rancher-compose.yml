@@ -12,7 +12,7 @@ wordPressLB:
     response_timeout: 2000
 wordpress:
   scale: 1
-.catalog
+.catalog:
   name: "Wordpress"
   version: "v0.1-emc4ever"
   description: "Blog tool, publishing platform and CMS"
