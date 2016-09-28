@@ -1,7 +1,7 @@
 db:
   scale: 1
 wordPressLB:
-  scale: 3
+  scale: ${wordpress_num}
   load_balancer_config:
     haproxy_config: {}
   health_check:
