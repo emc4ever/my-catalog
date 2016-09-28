@@ -23,4 +23,3 @@ wordpress:
   image: wordpress
   links:
   - db:mysql
-~
