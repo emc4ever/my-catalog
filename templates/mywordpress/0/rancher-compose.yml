@@ -31,7 +31,7 @@ wordpress:
       type: "int"
     - variable: mysql_data
       description: "Name of volume from rexray for /var/lib/mysql"
-      lable: "Name of volume from rexray"
+      label: "Name of volume from rexray"
       required: true
       default: "mysql1"
       type: "string"
