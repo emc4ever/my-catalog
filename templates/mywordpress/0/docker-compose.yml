@@ -7,11 +7,11 @@ db:
   image: mysql
   privileged: true
   volumes:
-  - :/var/lib/mysql
+  - ${mysql_data}:/var/lib/mysql
   volume_driver: rexray
 wordPressLB:
   ports:
-  - 8091:80
+  - ${public_port}:80
   tty: true
   image: rancher/load-balancer-service
   links:
