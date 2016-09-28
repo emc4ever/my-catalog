@@ -1,0 +1,27 @@
+[‎9/‎28/‎2016 1:41 PM] Zhang, Shanlong:
+db:
+  environment:
+    MYSQL_DATABASE: wordpress
+    MYSQL_PASSWORD: wwwwwww
+    MYSQL_ROOT_PASSWORD: wwwwwww
+    MYSQL_USER: wordpress
+  image: mysql
+  privileged: true
+  volumes:
+  - :/var/lib/mysql
+  volume_driver: rexray
+wordPressLB:
+  ports:
+  - 8091:80
+  tty: true
+  image: rancher/load-balancer-service
+  links:
+  - wordpress:wordpress
+  stdin_open: true
+wordpress:
+  environment:
+    WORDPRESS_DB_PASSWORD: wwwwwww
+  image: wordpress
+  links:
+  - db:mysql
+~
